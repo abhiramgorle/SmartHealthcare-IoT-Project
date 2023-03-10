@@ -205,68 +205,7 @@ if(digitalRead(button_3)== HIGH)
     if(digitalRead(button_3)==HIGH){lcd.clear();digitalWrite(buzzerpin, LOW);break;}
   } 
   delay(250);
-/*while(1)
- {
-      pir_reader = digitalRead(pir_sensor);
-      
-      if (pir_reader == HIGH)
-      {
-        
-  // Duration will be the input pulse width and distance will be the distance to the obstacle in centimeters
-	int duration, distance;
-	// Output pulse with 1ms width on trigPin
-	digitalWrite(triggerPin, HIGH); 
-	delay(100);
-	digitalWrite(triggerPin, LOW);
-	// Measure the pulse input in echo pin
-	duration = pulseIn(echoPin, HIGH);
-	// Distance is half the duration devided by 29.1 (from datasheet)
-	distance = (duration/2) / 29.1;
-   // pir_reader = digitalRead(pir_sensor);
-	// if distance less than 0.5 meter and more than 0 (0 or less means over range) 
-         if (distance <= 100 && distance >= 0) 
-      {
-    	// Buzz
-    	digitalWrite(buzzerpin, HIGH);
-       lcd.clear();
-      lcd.setCursor(0,0);
-      lcd.print("AlARM BUZZES");
-      //delay(3000);
-      
-      lcd.setCursor(0,1);
-      lcd.print("Not safe");
-      delay(5000);
-    digitalWrite(buzzerpin, LOW);
-        
-     }
-      else 
-    {
-    	// Don't buzz
-    	digitalWrite(buzzerpin, LOW);
-      lcd.clear();
-      lcd.setCursor(0,0);
-      lcd.print("NO ALARM");
-      //delay(3000);
-      
-      lcd.setCursor(0,1);
-      lcd.print(" safe");
-      delay(5000);
-        lcd.clear();
-    }
-   }   
-  
-    else
-    {
-      lcd.clear();
-      lcd.setCursor(0,0);
-      lcd.print("No Human");
-      lcd.setCursor(0,1);
-      lcd.print("Detected");
-    }
-*/
-//} 
-//3rd loop ends
-     
+
 }
   
 if(digitalRead(button_4)== HIGH)
